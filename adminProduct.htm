@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<%@page import="java.sql.ResultSet"%>
-<%@page import="java.sql.Statement"%>
-<%@page import="java.sql.Connection"%>
-<%@page import="database.Dbconn"%>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -106,19 +102,6 @@ function addproduct(){
                     <div class="box_c">
                                         
                                 
-<%
-
-
-//String sid=request.getSession().getAttribute("id").toString();
-//out.println(sid);
-
-Dbconn db=new Dbconn();
-Connection con=db.getconnection();
-String sql="SELECT * FROM product_master";
-//out.println("ssm_sm_id");
-Statement stmt=con.createStatement();
-ResultSet rs2=stmt.executeQuery(sql);
-%>
 <br/><br/><p class="lb_ribbon lb_blue">product List </p>
  <div class="box_c_content">
                             <table cellpadding="0" cellspacing="0" border="1" class="display mobile_dt1 dt_act" id="dt1">
@@ -133,12 +116,6 @@ ResultSet rs2=stmt.executeQuery(sql);
                                         <th class="essential">Stock</th>
                                           </tr>
                                            </thead>
-<% 
-while(rs2.next()){
-	int id=rs2.getInt("P_id");
-	String name=rs2.getString("P_name");
-		
-	%>
 	
                                       <!--  <th class="essential">Capital</th>
                                         <th>Population</th>
@@ -147,24 +124,19 @@ while(rs2.next()){
                                    
 <!--  	<div  id="contentbox"  style="border:1px solid #000000;"> -->
  <th class="chb_col"><br><input type="checkbox" class="chSel_all" />
- <td><%=rs2.getString("P_name")%></td>
-<td>	<%=rs2.getString("P_brand")%> </td>
-<td>	<%=rs2.getString("P_category")%> </td>
-<td>	<%=rs2.getString("P_description")%> </td>
-<td>	<%=rs2.getString("P_price")%> </td>
-<td>	<%=rs2.getString("P_stock")%> </td>
+ <td></td>
+<td>	</td>
+<td>	 </td>
+<td>	 </td>
+<td>	 </td>
+<td>	 </td>
 
-<td><a href="adminDltPro.htm?id=<%=id%>">Delete</a></td></th>
+<td><a href="adminDltPro.htm?id=">Delete</a></td></th>
 	
 	
 	
 
-	<% 
 	
-}
-
-
-%>
 
 </div>
 <div class="lb_ribbon lb_blue"><a href="adminAddProduct.htm" value="Add product" id="addpro" >Add Product</a></div>
