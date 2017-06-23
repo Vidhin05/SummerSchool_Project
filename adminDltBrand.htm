@@ -1,0 +1,32 @@
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.SQLException"%>
+
+<%@page import="java.sql.Connection"%>
+<%@page import="database.Dbconn"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+ Dbconn db=new Dbconn();
+ Connection con=db.getconnection();
+ 
+ String id= request.getParameter("id");
+String query="delete from brand_master where B_id='"+id+"'";
+		try {
+			PreparedStatement pstmt=con.prepareStatement(query);
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		response.sendRedirect("adminBrand.htm");
+		 %>     
+</body>
+</html>

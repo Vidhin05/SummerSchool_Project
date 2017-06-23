@@ -1,0 +1,492 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Blog Single | E-Shopper</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/font-awesome.min.css" rel="stylesheet">
+    <link href="./css/prettyPhoto.css" rel="stylesheet">
+    <link href="./css/price-range.css" rel="stylesheet">
+    <link href="./css/animate.css" rel="stylesheet">
+	<link href="./css/main.css" rel="stylesheet">
+	<link href="./css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
+
+<body>
+	<header id="header"><!--header-->
+		<div class="header_top"><!--header_top-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="contactinfo">
+							<ul class="nav nav-pills">
+								<li><a href=""><i class="fa fa-phone"></i> +91 9913295870</a></li>
+								<li><a href=""><i class="fa fa-envelope"></i>ividhin@gmail.com</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="social-icons pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href=""><i class="fa fa-facebook"></i></a></li>
+								<li><a href=""><i class="fa fa-twitter"></i></a></li>
+								<li><a href=""><i class="fa fa-linkedin"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header_top-->
+		
+		<div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="logo pull-left">
+							<a href="home.htm"><img src="./images/home/logo.png" alt="" /></a>
+						</div>
+						<div class="btn-group pull-right">
+							<div class="btn-group">
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-8">
+						<div class="shop-menu pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href=""><i class="fa fa-user"></i> Account</a></li>
+								<li><a href=""><i class="fa fa-star"></i> Wishlist</a></li>
+								<li><a href="checkout.htm"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+								<li><a href="cart.htm"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="index.htm"><i class="fa fa-lock"></i> Login</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-middle-->
+	
+		<div class="header-bottom"><!--header-bottom-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="mainmenu pull-left">
+							<ul class="nav navbar-nav collapse navbar-collapse">
+								<li><a href="home.htm">Home</a></li>
+								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="shop.htm">Products</a></li>
+										<li><a href="product-details.htm">Product Details</a></li> 
+										<li><a href="checkout.htm">Checkout</a></li> 
+										<li><a href="cart.htm">Cart</a></li> 
+										<li><a href="index.htm">Login</a></li> 
+                                    </ul>
+                                </li> 
+								<li class="dropdown"><a href="#" class="active">Blog<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="blog.htm">Blog List</a></li>
+										<li><a href="blog-single.htm" class="active">Blog Single</a></li>
+                                    </ul>
+                                </li> 
+								<li><a href="404.htm">404</a></li>
+								<li><a href="contact-us.htm">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="search_box pull-right">
+							<input type="text" placeholder="Search"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-bottom-->
+	</header><!--/header-->
+	
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="left-sidebar">
+						<h2>Category</h2>
+						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											Sportswear
+										</a>
+									</h4>
+								</div>
+								<div id="sportswear" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul>
+											<li><a href="">Nike </a></li>
+											<li><a href="">Adidas </a></li>
+											<li><a href="">Puma</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#mens">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											Mens
+										</a>
+									</h4>
+								</div>
+								<div id="mens" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul>
+											<li><a href="">Versace</a></li>
+											<li><a href="">Prada</a></li>
+											<li><a href="">Gucci</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#womens">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											Womens
+										</a>
+									</h4>
+								</div>
+								<div id="womens" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul>
+											<li><a href="">Valentino</a></li>
+											<li><a href="">chanel</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><a href="#">Households</a></h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><a href="#">Bags</a></h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><a href="#">Shoes</a></h4>
+								</div>
+							</div>
+						</div><!--/category-products-->
+					
+						<div class="brands_products"><!--brands_products-->
+							<h2>Brands</h2>
+							<div class="brands-name">
+								<ul class="nav nav-pills nav-stacked">
+									<li><a href="#"> <span class="pull-right">(5)</span>Armani</a></li>
+									<li><a href="#"> <span class="pull-right">(6)</span>Varsache</a></li>
+									<li><a href="#"> <span class="pull-right">(7)</span>Valentino</a></li>
+									<li><a href="#"> <span class="pull-right">(2)</span>Guess</a></li>
+									<li><a href="#"> <span class="pull-right">(5)</span>Prada</a></li>
+									<li><a href="#"> <span class="pull-right">(9)</span>Dolce and gabbana</a></li>
+									<li><a href="#"> <span class="pull-right">(4)</span>Gucci</a></li>
+								</ul>
+							</div>
+						</div><!--/brands_products-->
+						
+						
+						<div class="shipping text-center"><!--shipping-->
+							<img src="./images/home/shipping.jpg" alt="" />
+						</div><!--/shipping-->
+					</div>
+				</div>
+				<div class="col-sm-9">
+					<div class="blog-post-area">
+						<h2 class="title text-center">Latest From our Blog</h2>
+						<div class="single-blog-post">
+							<h3>Girls Blue T Shirt arrived in store</h3>
+							<div class="post-meta">
+								<ul>
+									<li><i class="fa fa-user"></i> Prada</li>
+									<li><i class="fa fa-clock-o"></i> 1:33 pm</li>
+									<li><i class="fa fa-calendar"></i> FEB 52,015</li>
+								</ul>
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</span>
+							</div>
+							<a href="">
+								<img src="./images/blog/blog-one.jpg" alt="">
+							</a>
+							
+							<div class="pager-area">
+								<ul class="pager pull-right">
+									<li><a href="#">Pre</a></li>
+									<li><a href="#">Next</a></li>
+								</ul>
+							</div>
+						</div>
+					</div><!--/blog-post-area-->
+
+					<div class="rating-area">
+						<ul class="ratings">
+							<li class="rate-this">Rate this item:</li>
+							<li>
+								<i class="fa fa-star color"></i>
+								<i class="fa fa-star color"></i>
+								<i class="fa fa-star color"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+							</li>
+							<li class="color">(6 votes)</li>
+						</ul>
+						<ul class="tag">
+							<li>TAG:</li>
+							<li><a class="color" href="">Pink <span>/</span></a></li>
+							<li><a class="color" href="">T-Shirt <span>/</span></a></li>
+							<li><a class="color" href="">Girls</a></li>
+						</ul>
+					</div><!--/rating-area-->
+
+					<div class="socials-share">
+						<a href=""><img src="./images/blog/socials.png" alt=""></a>
+					</div><!--/socials-share-->
+
+					<div class="media commnets">
+						<a class="pull-left" href="#">
+							<img class="media-object" src="./images/blog/man-one.jpg" alt="">
+						</a>
+						<div class="media-body">
+							<h4 class="media-heading">Naisargi majithia</h4>
+							<p>The fashion and lifestyle website lets your wardrobe stay stylishly up-to-date with its repository of cutting-edge fashion apparel, footwear and accessories.</p>
+							<div class="blog-socials">
+								
+							</div>
+						</div>
+					</div><!--Comments-->
+					<div class="response-area">
+						<h2>3 RESPONSES</h2>
+						<ul class="media-list">
+							<li class="media">
+								
+								<a class="pull-left" href="#">
+									<img class="media-object" src="./images/blog/man-two.jpg" alt="">
+								</a>
+								<div class="media-body">
+									<ul class="sinlge-post-meta">
+                                                                            <li><i class="fa fa-user"></i></li>Dhairya Chauhan
+										<li><i class="fa fa-clock-o"></i> 1:33 pm</li>
+										<li><i class="fa fa-calendar"></i> Feb 25, 2015</li>
+									</ul>
+									<p>Prada did something she'd never done before with her show tonight. On every seat there was a printed manifesto for the collection—or, rather, collections. (She was showing both Fall menswear and Pre-Fall womenswear.) "</p>
+									
+								</div>
+							</li>
+							<li class="media second-media">
+								<a class="pull-left" href="#">
+									<img class="media-object" src="./images/blog/man-three.jpg" alt="">
+								</a>
+								<div class="media-body">
+									<ul class="sinlge-post-meta">
+										<li><i class="fa fa-user"></i>brinda monani</li>
+										<li><i class="fa fa-clock-o"></i> 3:33 pm</li>
+										<li><i class="fa fa-calendar"></i> 2 JAN, 2015</li>
+									</ul>
+									<p>In June, the show space was transformed into a huge swimming pool as a backdrop for the Spring menswear collection. Today, the women's turn, the expanse of water had been replaced by eerie dunes made of lilac sand.</p>
+									
+								</div>
+							</li>
+							<li class="media">
+								<a class="pull-left" href="#">
+									<img class="media-object" src="./images/blog/man-four.jpg" alt="">
+								</a>
+								<div class="media-body">
+									<ul class="sinlge-post-meta">
+										<li><i class="fa fa-user"></i>Khushali Parmar</li>
+										<li><i class="fa fa-clock-o"></i> 4:42 pm</li>
+										<li><i class="fa fa-calendar"></i> Jan 1, 2015</li>
+									</ul>
+									<p>"Uniform, severe, elegant: This is the fashion I like at this moment."</p>
+								</div>
+							</li>
+						</ul>					
+					</div><!--/Response-area-->
+				</div>	
+			</div>
+		</div>
+	</section>
+	
+	<footer id="footer"><!--Footer-->
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="companyinfo">
+							<h2><span>e</span>-shopper</h2>
+							<p>A fashion and lifestyle website lets your wardrobe stay stylishly up-to-date with its repository of cutting-edge fashion apparel, footwear and accessories.</p>
+						</div>
+					</div>
+					<div class="col-sm-7">
+						<div class="col-sm-3">
+							<div class="video-gallery text-center">
+								<a href="#">
+									<div class="iframe-img">
+										<img src="./images/home/iframe1.png" alt="" />
+									</div>
+									<div class="overlay-icon">
+										<i class="fa fa-play-circle-o"></i>
+									</div>
+								</a>
+								<p>spring collection</p>
+								<h2>24 JUNE 2015</h2>
+							</div>
+						</div>
+						
+						<div class="col-sm-3">
+							<div class="video-gallery text-center">
+								<a href="autumn.htm">
+									<div class="iframe-img">
+										<img src="./images/home/iframe2.png" alt="" />
+									</div>
+									<div class="overlay-icon">
+										<i class="fa fa-play-circle-o"></i>
+									</div>
+								</a>
+								<p>Autumn Collecion</p>
+								<h2>26 FEB 2015</h2>
+							</div>
+						</div>
+						
+						<div class="col-sm-3">
+							<div class="video-gallery text-center">
+								<a href="winter.htm">
+									<div class="iframe-img">
+										<img src="./images/home/iframe3.png" alt="" />
+									</div>
+									<div class="overlay-icon">
+										<i class="fa fa-play-circle-o"></i>
+									</div>
+								</a>
+								<p>Winter collection</p>
+								<h2>22 DEC 2015</h2>
+							</div>
+						</div>
+						
+						<div class="col-sm-3">
+							<div class="video-gallery text-center">
+								<a href="summer.htm">
+									<div class="iframe-img">
+										<img src="./images/home/iframe4.png" alt="" />
+									</div>
+									<div class="overlay-icon">
+										<i class="fa fa-play-circle-o"></i>
+									</div>
+								</a>
+								<p>Summer Collection</p>
+								<h2>2 MAY 2015</h2>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="address">
+							<img src="./images/home/map.png" alt="" />
+							<p>505 S Atlantic Ave jihu Beach,mumbai,INDIA.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer-widget">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Service</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="">Online Help</a></li>
+								<li><a href="">Contact Us</a></li>
+								<li><a href="">Order Status</a></li>
+								<li><a href="">Change Location</a></li>
+								<li><a href="faq.htm">FAQ’s</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Quick Shop</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="">T-Shirt</a></li>
+								<li><a href="">Mens</a></li>
+								<li><a href="">Womens</a></li>
+								<li><a href="">Gift Cards</a></li>
+								<li><a href="">Shoes</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Policies</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="">Terms of Use</a></li>
+								<li><a href="">Privecy Policy</a></li>
+								<li><a href="">Refund Policy</a></li>
+								<li><a href="">Billing System</a></li>
+								<li><a href="">Ticket System</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+						</div>
+					</div>
+					<div class="col-sm-3 col-sm-offset-1">
+						<div class="single-widget">
+							<h2>About Shopper</h2>
+							<form action="#" class="searchform">
+								<input type="text" placeholder="Your email address" />
+								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+								<p>Get the most recent updates from <br />our site and be updated your self...</p>
+							</form>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		
+		
+	</footer><!--/Footer-->
+</body>
+</html>

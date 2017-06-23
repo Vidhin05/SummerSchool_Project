@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Add Product</title>
+</head>
+
+<body>
+    <div>
+        <br/>
+        <form action="product" method="post" enctype="multipart/form-data">
+            product_name: <input type="text" name="pro"><br/><br/> product_Brand:
+            <select name="bra">
+</select>
+            <br/><br/> product_Category:
+            <select name="cat">
+</select>
+            <br/><br/> product_Description: <input type="text" name="des"><br/><br/> product_Price: <input type="text" name="pri"><br/><br/>            product_Stock: <input type="text" name="sto"><br/><br/>
+            <td>Image Link: </td>
+            <input type="file" name="file" onchange="readURL(this);">
+            <img id="blah" src="#" alt="your image" />
+            </td>
+            <input type="submit" value="add">
+        </form>
+    </div>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result)
+                        .width(150)
+                        .height(200);
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+</body>
+
+</html>
