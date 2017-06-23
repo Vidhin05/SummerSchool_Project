@@ -1,31 +1,12 @@
-<%@page import="database.Dbconn"%>
-<%@page import="java.sql.Connection"%>
-<%@page import="java.sql.SQLException"%>
-<%@page import="java.sql.PreparedStatement"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Insert title here</title>
 </head>
+
 <body>
-<%Connection con = null;
-Dbconn db = new Dbconn();
-con = db.getconnection();
-try{
-String sid=request.getSession().getAttribute("id").toString();
-String sql="update user1 set online=0 where user_id='"+sid+"'";
-
-PreparedStatement psmt=con.prepareStatement(sql);
-psmt.executeUpdate();}catch(SQLException e){
-	e.printStackTrace();
-}
-
-
-session.invalidate();
-response.sendRedirect("index1.htm");
-%>
 </body>
+
 </html>

@@ -1,46 +1,35 @@
-<%@page import="service.CartService"%>
-<%@page import="model.Cart"%>
-<%@page import="java.util.ArrayList"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-<script src="js/jquery.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Insert title here</title>
+    <script src="js/jquery.js"></script>
 
 </head>
+
 <body>
-<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" id="paymentForm" onload="formLoad();">
-<input type="hidden" name="cmd" value="_cart">
-<input type="hidden" name="upload" value="1">
-<input type="hidden" name="business" value="support@web30india.com">
-<input type="hidden" name="currency_code" value="AUD">
-<%ArrayList<Cart> cartlist=new CartService(request.getSession()).getAllCart();
-int count=1;
-for(Cart c:cartlist){ %>
-       <input type="hidden" name="item_name_<%=count %>" value="<%=c.getP().getName() %>">
-       <input type="hidden" name="amount_<%=count %>" value="<%=c.getProductPrice() %>">
-       <input type="hidden" name="quantity_<%=count %>" value="<%=c.getQty() %>">
-<% count++;
-       } %>
-
-
-<input type="hidden" name="return" value="http://localhost:8080/SDP-1/payment">
-<!--
+    <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" id="paymentForm" onload="formLoad();">
+        <input type="hidden" name="cmd" value="_cart">
+        <input type="hidden" name="upload" value="1">
+        <input type="hidden" name="business" value="support@web30india.com">
+        <input type="hidden" name="currency_code" value="AUD">
+        <input type="hidden" name="item_name_" value="">
+        <input type="hidden" name="amount_" value="">
+        <input type="hidden" name="quantity_" value="">
+        <input type="hidden" name="return" value="http://localhost:8080/SDP-1/payment">
+        <!--
 <input type="image" src="http://www.paypal.com/en_US/i/btn/x-click-but01.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">-->
-<script type="text/javascript">
-function formLoad()
-{
-    
-    $("#paymentForm").submit();
-} 
+        <script type="text/javascript">
+            function formLoad() {
 
-</script>
-<script>
-//call after page loaded
-window.onload=formLoad ; 
-</script>
+                $("#paymentForm").submit();
+            }
+        </script>
+        <script>
+            //call after page loaded
+            window.onload = formLoad;
+        </script>
 </body>
+
 </html>
