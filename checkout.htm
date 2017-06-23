@@ -1,8 +1,4 @@
-<%@page import="model.CategoryModel"%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="service.CategoryService"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -95,11 +91,10 @@
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								
-								 <%ArrayList<CategoryModel> catlist= new CategoryService().getAllCategoryList();
-            					for(CategoryModel c:catlist){ %>
-                                <li><a href="./shop?catid=<%=c.getId() %>"><%=c.getName()%></a></li>
+								 
+                                <li><a href="./shop?catid="></a></li>
 								        
-                                    <%} %>
+                                    
                                   <!-- 
 								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
@@ -131,8 +126,7 @@
 				  <li class="active">Check out</li>
 				</ol>
 			</div><!--/breadcrums-->
-<%
-if(request.getSession().getAttribute("id")==null){%>
+
 			<div class="step-one">
 				<h2 class="heading">Step1</h2>
 			</div>
@@ -152,9 +146,7 @@ if(request.getSession().getAttribute("id")==null){%>
 			<div class="register-req">
 				<p>Please use Register And Checkout to easily get access to your order history, or use Checkout as Guest</p>
 			</div><!--/register-req-->
-			<%
-			}else{ 
-			%>
+		
 			<div class="step-one">
 			<h2 class="heading">Step2</h2>
 		</div>
@@ -250,7 +242,6 @@ if(request.getSession().getAttribute("id")==null){%>
 		</div>
 	</section> <!--/#cart_items-->
 
-	<%} %>
 
 	<footer id="footer"><!--Footer-->
 		<div class="footer-top">

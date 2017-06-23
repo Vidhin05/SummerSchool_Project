@@ -1,10 +1,3 @@
-<%@page import="service.CartService"%>
-<%@page import="model.Cart"%>
-<%@page import="model.CategoryModel"%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="service.CategoryService"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -97,11 +90,10 @@
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								
-								 <%ArrayList<CategoryModel> catlist= new CategoryService().getAllCategoryList();
-            					for(CategoryModel c:catlist){ %>
-                                <li><a href="./shop?catid=<%=c.getId() %>"><%=c.getName()%></a></li>
+							
+                                <li><a href="./shop?catid"></a></li>
 								        
-                                    <%} %>
+                                    
                                   <!-- 
 								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
@@ -148,44 +140,35 @@
 					</thead>
 					
 					<tbody>
-					<%
-					ArrayList<Cart> cartList= new CartService(session).getAllCart();
-					for(Cart c:cartList){
-					%>
+					
 					
 						<tr>
 							<td class="cart_product">
-								<a href=""><img src="image1/<%=c.getP().getImage()%>" style="height:70px; width:70px;" alt=""></a>
+								<a href=""><img src="image1/" style="height:70px; width:70px;" alt=""></a>
 							</td>
 							<td class="cart_description">
-								<h4><a href=""><%=c.getP().getName() %></a></h4>
-								<p>Web ID: <%=c.getProdctId() %></p>
+								<h4><a href=""></a></h4>
+								<p>Web ID: </p>
 							</td>
 							<td class="cart_price">
-								<p>$<%=c.getProductPrice() %></p>
+								<p>$</p>
 							</td>
 							<td class="cart_quantity">
 								<div class="cart_quantity_button">
 									<a class="cart_quantity_up" href=""> + </a>
-									<input class="cart_quantity_input" type="text" name="quantity" value="<%= String.valueOf(c.getQty()) %>" autocomplete="off" size="2">
+									<input class="cart_quantity_input" type="text" name="quantity" value="" autocomplete="off" size="2">
 									<a class="cart_quantity_down" href=""> - </a>
 								</div>
 							</td>
 							<td class="cart_total">
-								<p class="cart_total_price">$<%= String.valueOf(c.getSubTotal()) %></p>
+								<p class="cart_total_price">$</p>
 							</td>
 							<td class="cart_delete">
-								<a class="cart_quantity_delete" href="removeFromCart?id=<%=String.valueOf(c.getProdctId()) %>"><i class="fa fa-times"></i></a>
+								<a class="cart_quantity_delete" href="removeFromCart?id="><i class="fa fa-times"></i></a>
 							</td>
 						</tr>
 					
-					<%
 					
-					}
-					if(cartList.size()==0){
-						out.println("<tr><td colspan='6'>EMpty open cart</td></tr>");
-					}
-					%>
 					
 										</tbody>
 				</table>
@@ -257,11 +240,9 @@
 				<div class="col-sm-6">
 					<div class="total_area" style="height: 150px; width:800px;">
 						<ul>
-							<%
-							CartService c= new CartService(session);
-							 %>
+							
 							<li>Shipping Cost <span>Free</span></li>
-							<li>Total <span><%=c.getTotalPrice()%></span></li>
+							<li>Total <span></span></li>
 							
 						</ul>
 							<a class="btn btn-default update" href="">Update</a>
