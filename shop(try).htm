@@ -1,10 +1,3 @@
-<%@page import="model.ProductModel"%>
-<%@page import="model.BrandModel"%>
-<%@page import="model.CategoryModel"%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="service.CategoryService"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -97,11 +90,8 @@
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								
-								 <%ArrayList<CategoryModel> catlist= new CategoryService().getAllCategoryList();
-            					for(CategoryModel c:catlist){ %>
-                                <li><a href="./shop?catid=<%=c.getId() %>"><%=c.getName()%></a></li>
+                                <li><a href="./shop?catid="></a></li>
 								        
-                                    <%} %>
                                   <!-- 
 								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
@@ -144,16 +134,15 @@
 
 						<div class="panel panel-default">
 					
-													 <% //ArrayList<CategoryModel> cist=(ArrayList<CategoryModel>) request.getAttribute("catlist");
-            					for(CategoryModel c:catlist){ %>
+										
                         		        		<div class="panel panel-default">
 							<div class="panel-heading">
 								<h4 class="panel-title">
-									<a href="shop?catid=<%=c.getId() %>"><%=c.getName() %></a>
+									<a href="shop?catid="></a>
 								</h4>
 							</div>
 						</div>
-                                    <%} %>
+
 					
 				
 					</div>
@@ -166,12 +155,10 @@
 						<h2>Brands</h2>
 						<div class="brands-name">
 							<ul class="nav nav-pills nav-stacked">
-													 <% ArrayList<BrandModel> blist=(ArrayList<BrandModel>) request.getAttribute("brandlist");
-            					for(BrandModel c:blist){ %>
-            									<li><a href="shop?bid=<%=c.getId() %>"> <%=c.getName() %>
+
+            									<li><a href="shop?bid="> 
 								</a></li>
 				
-                                    <%} %>
 				        
 							</ul>
 						</div>
@@ -203,28 +190,23 @@
 				<div class="features_items">
 					<!--features_items-->
 					<h2 class="title text-center">Features Items</h2>
-					<%
 					
-						ArrayList<ProductModel> list=(ArrayList<ProductModel>) request.getAttribute("list");
-						
-						for (ProductModel e : list) {
-					%>
 					<div class="col-sm-4">
 						<div class="product-image-wrapper">
 							<div class="single-products">
 								<div class="productinfo text-center">
-									<img src="image1/<%=e.getImage()%>">
+									<img src="image1/">
 
-									<h2>$<%=e.getPrice()%></h2>
-									<p><%=e.getName()%></p>
-									<a href="#" id="<%=e.getId() %>"  class="btn btn-default add-to-cart"><i
+									<h2>$</h2>
+									<p></p>
+									<a href="#" id=""  class="btn btn-default add-to-cart"><i
 										class="fa fa-shopping-cart"></i>Add to cart</a>
 								</div>
 								<div class="product-overlay">
 									<div class="overlay-content">
 										<h2>$56</h2>
 										<p>Easy Polo Black Edition</p>
-										<a href="#" id="<%=e.getId() %>" class="btn btn-default add-to-cart"><i
+										<a href="#" id="" class="btn btn-default add-to-cart"><i
 											class="fa fa-shopping-cart"></i>Add to cart</a>
 									</div>
 								</div>
@@ -239,9 +221,6 @@
 							</div>
 						</div>
 					</div>
-					<%
-						}
-					%>
 
 					<ul class="pagination">
 						<li class="active"><a href="">1</a></li>
