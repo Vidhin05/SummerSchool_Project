@@ -40,9 +40,9 @@
 					<div class="col-sm-6">
 						<div class="social-icons pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href=""><i class="fa fa-facebook"></i></a></li>
-								<li><a href=""><i class="fa fa-twitter"></i></a></li>
-								<li><a href=""><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="https://facebook.com/"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="https://twitter.com/login"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -68,7 +68,7 @@
 								<li><a href="./checkout.htm"><i class="fa fa-crosshairs"></i> Checkout</a></li>
 								<li><a href="./cart.htm"><i class="fa fa-shopping-cart"></i> Cart</a></li>
 								<li><a href="./index1.htm" class="active"><i class="fa fa-lock"></i> Login</a></li>
-								<li><a href="./MyOrder"><i class="fa fa-shopping-cart"></i> My orders</a></li>
+								<li><a href="./myOrder.htm"><i class="fa fa-shopping-cart"></i> My orders</a></li>
 							</ul>
 						</div>
 					</div>
@@ -128,7 +128,8 @@
 				<div class="col-sm-3">
 					<div class="left-sidebar">
 						<h2>Category</h2>
-						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
+						<div class="panel-group category-products" id="accordian">
+							<!--category-productsr-->
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
@@ -141,9 +142,9 @@
 								<div id="sportswear" class="panel-collapse collapse">
 									<div class="panel-body">
 										<ul>
-											<li><a href="#">Nike </a></li>
-											<li><a href="#">Adidas </a></li>
-											<li><a href="#">Puma</a></li>
+											<li><a href="nikemen.htm">Nike </a></li>
+											<li><a href="adidasmen.htm">Adidas </a></li>
+											<li><a href="pumamen.htm">Puma</a></li>
 										</ul>
 									</div>
 								</div>
@@ -153,33 +154,42 @@
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordian" href="#mens">
 											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
-											Mens
+											Men's
 										</a>
 									</h4>
 								</div>
 								<div id="mens" class="panel-collapse collapse">
 									<div class="panel-body">
 										<ul>
-											<li><a href="#">Versace</a></li>
-											<li><a href="#">Armani</a></li>
-											<li><a href="#">Prada</a></li>
-											<li><a href="#">Dolce and Gabbana</a></li>
-											<li><a href="#">Gucci</a></li>
+											<li><a href="./guccimen.htm">Gucci</a></li>
 										</ul>
 									</div>
 								</div>
 							</div>
-							
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a data-toggle="collapse" data-parent="#accordian" href="chanelwomen.htm">
+										<a href="./chanelwomen.htm">
 											<span class="badge pull-right"></span>
-											Womens
+											Women's
 										</a>
 									</h4>
 								</div>
-								
+								<div id="mens" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul>
+											<li><a href="./chanelwomen.htm">Chanel</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="panel panel-default">
+
+							</div>
+							<div class="panel panel-default">
+							</div>
+							<div class="panel panel-default">
 							</div>
 						</div><!--/category-products-->
 					
@@ -426,7 +436,8 @@
 	</footer><!--/Footer-->
 	
 
-  
-    
+<script src="./js/price-range.js"></script>
+<script src="./js/jquery.js"></script>  
+	<script src="./js/bootstrap.min.js"></script>    
 </body>
 </html>
