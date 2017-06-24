@@ -22,18 +22,34 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' />
     <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis' rel='stylesheet' />
 
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+
+
 </head>
 
 <body class="ptrn_a grdnt_a mhover_a">
-    <header>
+    <header class="alert alert-info">
         <div class="container head_s_a">
             <div class="row sepH_b">
                 <div class="six columns">
                     <div class="row">
                         <div class="five phone-two columns">
-                            <div id="logo">
-                                <p class="lb_ribbon lb_blue">DA-Cart Admin</p>
-                            </div>
+                            <div class="container">
+									<div class="jumbotron">
+										<h1 align="center" style="color:firebrick;" class="lb_ribbon lb_blue">DA-Cart Admin</h1> 
+									</div>
+							</div>
                         </div>
                     </div>
                 </div>
@@ -44,13 +60,13 @@
                 <div class="twelve columns">
                     <nav id="smoothmenu_h" class="ddsmoothmenu">
                         <ul class="cf">
-                            <li>
-                                <a href="adminDashboard.htm" " class="mb_parent first_el ">Dashboard</a>
+                            
+                                <a href="adminDashboard.htm"  class="mb_parent first_el "><button type="button" class="btn btn-default">Dashboard</button></a>
 									<ul style="display:none ">
 										<li><a href="dashboard.html ">Regular</a></li>
 										<li><a href="drag_drop.html ">Drag &amp; Drop</a></li>
 									</ul>
-								</li>
+							
                             </ul>
                         </nav>
                     </div>
@@ -63,11 +79,11 @@
                 </div>
             </div>
         </header>
-        <div class="container ">
+        <div class="container " >
             <div class="row ">
                 <div class="twelve columns ">
                     <div class="box_c ">                                                          
-<br/><br/><p class="lb_ribbon lb_blue ">brand List </p>
+<br/><br/><p class="lb_ribbon lb_blue "><h1>Brand List </h1></p>
  <div class="box_c_content ">
                             <table cellpadding="2 " cellspacing="2 " border="2 " class="display mobile_dt1 dt_act
                                     " id="dt1 ">
@@ -92,10 +108,10 @@
                                 </td>
                                 </th>
                                               </div>
-                <div class=" lb_ribbon lb_blue "><a href="adminAddBrand.htm " value="Add brand " id="addbrand ">Add Brand</a></div>
+                <div class=" lb_ribbon lb_blue " ><a href="adminAddBrand.htm " value="Add brand " id="addbrand "><button type="button" class="btn btn-default">Add Brand</button></a></div>
             </div>
-            <footer class="container " id="footer ">
-                <div class="row ">
+            <footer  class="container " id="footer ">
+                <div class="row " >
                     <div class="twelve columns ">
 
                     </div>
