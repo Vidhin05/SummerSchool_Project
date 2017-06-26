@@ -1,6 +1,56 @@
+<?php
+error_reporting(0);
+include('conn.php');
+if(isset($_REQUEST['submit'])){
+	$unm=$_REQUEST['unm'];
+	$eid=$_REQUEST['eid'];
+	$pass=$_REQUEST['pass'];
+	$sq="insert into login(unm,eid,pass) values ('$unm','$eid','$pass')";
+	$res=$conn->query($sq);
+	if($res){
+		?>
+		<script type="text/javascript">
+			window.location="login.php"
+		</script>
+		<?php
+	}
+	else{
+		?>
+		<script type="text/javascript">
+			alert(" Username or email id already registered");
+			window.location="login.php";
+		</script>
+		<?php
+	}
+}
+?>
+<?php
+include('conn.php');
+if(isset($_REQUEST['login'])){
+	$unm=$_REQUEST['unm'];
+	$pass=$_REQUEST['pass'];
+	$lgn="select * from login where unm='$unm' AND pass='$pass'";
+	$res=$conn->query($lgn);
+	$chk=$res->num_rows;
+	if($chk>=1){
+		?>
+		<script type="text/javascript">
+			window.location="index.htm"
+		</script>
+		<?php
+	}
+	else{
+		?>
+		<script type="text/javascript">
+			alert("invalid Password or Username");
+			window.location="login.php";
+		</script>
+		<?php
+	}
+}
+?>
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,10 +65,6 @@
 	<link href="./css/animate.css" rel="stylesheet">
 	<link href="./css/main.css" rel="stylesheet">
 	<link href="./css/responsive.css" rel="stylesheet">
-	<!--[if lt IE 9]>
-    <script src="./js/html5shiv.js"></script>
-    <script src="./js/respond.min.js"></script>
-    <![endif]-->
 	<link rel="shortcut icon" href="images/ico/favicon.ico">
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
@@ -45,9 +91,9 @@
 					<div class="col-sm-6">
 						<div class="social-icons pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="https://twitter.com"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="https://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href=""><i class="fa fa-facebook"></i></a></li>
+								<li><a href=""><i class="fa fa-twitter"></i></a></li>
+								<li><a href=""><i class="fa fa-linkedin"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -122,12 +168,10 @@
 				<div class="login-form">
 					<!--login form-->
 					<h2>Login to your account</h2>
-					<form action="ValidateUser" method="post">
-						<input type="text" name="name" placeholder="Name" />
-						<input type="password" name="password" placeholder="Password" />
-						<span>
-							</span>
-						<button type="submit" class="btn btn-default">Login</button>
+					<form action="" method="POST">
+						<input type="text" name="unm" placeholder="Username">
+						<input type="Password" name="pass" placeholder="Password">
+						<input class="btn btn-default" type="submit" name="login" value="SignIn">
 					</form>
 				</div>
 				<!--/login form-->
@@ -139,11 +183,11 @@
 				<div class="signup-form">
 					<!--sign up form-->
 					<h2>New User</h2>
-					<form action="RegisterUser" method="post">
-						<input type="text" name="rname" placeholder="Name" />
-						<input type="email" name="remail" placeholder="Email Address" />
-						<input type="password" name="rpassword" placeholder="Password" />
-						<button type="submit" class="btn btn-default" value="sign up">sign up</button>
+					<form action="" method="POST">
+						<input type="text" name="unm" placeholder="Username">
+						<input type="text" name="eid" placeholder="EmailID">
+						<input type="Password" name="pass" placeholder="Password">
+						<input class="btn btn-default" type="submit" name="submit" value="submit">
 					</form>
 				</div>
 				<!--/sign up form-->
